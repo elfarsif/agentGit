@@ -1,0 +1,14 @@
+{
+  "manifest_version": 3,
+  "name": "AgentGit",
+  "version": "1.0",
+  "description": "Extract and save markdown content from pages",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ]
+}
+
