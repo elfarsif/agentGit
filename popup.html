@@ -12,6 +12,37 @@
     <p>Extract markdown content from the page</p>
     <button id="commitBtn" class="commit-btn">Commit</button>
     <div id="status" class="status"></div>
+    
+    <div id="commitsList" class="commits-list">
+      <h2>Stored Commits</h2>
+      <div id="commitsContainer"></div>
+    </div>
+  </div>
+
+  <!-- Commit Message Modal -->
+  <div id="commitModal" class="modal">
+    <div class="modal-content">
+      <h3>Add Commit Message</h3>
+      <input type="text" id="commitMessage" placeholder="Enter a label for this commit..." maxlength="100">
+      <div class="modal-buttons">
+        <button id="confirmCommit" class="confirm-btn">Save</button>
+        <button id="cancelCommit" class="cancel-btn">Cancel</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- View Commit Modal -->
+  <div id="viewModal" class="modal">
+    <div class="modal-content view-modal-content">
+      <div class="view-modal-header">
+        <h3 id="viewModalTitle">Commit Content</h3>
+        <button id="closeViewModal" class="close-btn">&times;</button>
+      </div>
+      <pre id="viewModalContent" class="view-content"></pre>
+      <div class="modal-buttons">
+        <button id="closeViewBtn" class="cancel-btn">Close</button>
+      </div>
+    </div>
   </div>
   <script src="popup.js"></script>
 </body>
