@@ -50,7 +50,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const markdownContent = results[0].result;
 
       if (!markdownContent) {
-        statusDiv.textContent = 'Error: Markdown content not found';
+        statusDiv.textContent = 'Error: Content not found in systemPrompt textarea';
         statusDiv.className = 'status error';
         commitBtn.disabled = false;
         return;
@@ -161,23 +161,16 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// Function to extract markdown from the page
+// Function to extract content from the systemPrompt textarea
 function extractMarkdown() {
-  // Target the div with the specific classes
-  const selector = '.prose.prose-slate.dark\\:prose-invert.max-w-none.prose-sm';
-  const markdownDiv = document.querySelector(selector);
+  // Target the textarea with id "systemPrompt"
+  const textarea = document.getElementById('systemPrompt');
   
-  if (!markdownDiv) {
-    // Try alternative selector without escaping
-    const altSelector = 'div.prose.prose-slate';
-    const altDiv = document.querySelector(altSelector);
-    if (altDiv) {
-      return altDiv.innerText || altDiv.textContent;
-    }
+  if (!textarea) {
     return null;
   }
   
-  return markdownDiv.innerText || markdownDiv.textContent;
+  return textarea.value || textarea.textContent || '';
 }
 
 // Helper function to escape HTML

@@ -1,24 +1,28 @@
-# AgentGit Chrome Extension
+# Hello World Chrome Extension
 
-A Chrome extension that extracts and saves markdown content from web pages.
+A simple Chrome extension that displays "Hello World" when clicked.
 
 ## Installation
-
-### 1. Download from GitHub
-
-1. Go to the GitHub repository
-2. Click the green "Code" button
-3. Select "Download ZIP"
-4. Extract the ZIP file to a location on your computer
-
-### 2. Load in Chrome
 
 1. Open Chrome and navigate to `chrome://extensions/`
 2. Enable "Developer mode" (toggle in the top right)
 3. Click "Load unpacked"
-4. Select the extracted `agentGit` folder
+4. Select this directory (`agentGit`)
 5. The extension should now appear in your extensions list
 
 ## Usage
 
-Click the extension icon in the Chrome toolbar to extract and save markdown content from the current page.
+Click the extension icon in the Chrome toolbar to see the "Hello World" popup.
+
+## Files
+
+- `manifest.json` - Extension configuration file
+- `popup.html` - The popup UI
+- `popup.css` - Styling for the popup
+- `popup.js` - JavaScript for the popup
+- `icon*.png` - Extension icons (you'll need to add these)
+
+## Note
+
+You'll need to create icon files (icon16.png, icon48.png, icon128.png) or remove the icon references from manifest.json if you don't have icons yet.
+
